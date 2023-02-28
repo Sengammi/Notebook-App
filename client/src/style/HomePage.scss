@@ -1,0 +1,60 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.home-page{
+  margin-top: 15vh;
+}
+.container{
+  padding: 0 10%
+}
+.home-text{
+  margin-bottom: 10px;
+  //font-size: 26px;
+  color: #313131;
+  font-weight: 600;
+}
+.added-text{
+  margin: 5vh 0 0;
+  color: #313131;
+  font-weight: 600;
+}
+
+.p-text {
+  margin-top: 10vh;
+}
+
+.buttons{
+  margin-top: 10vh;
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  padding: 0 10%;
+  .button{
+    width: 45%;
+    font-size: 20px;
+    transition: all 0.2s ease-in-out;
+    max-width: 500px;
+  }
+  .button:hover{
+    transform: scale(1.1);
+  }
+}
+
+@media screen and (max-width:768px) {
+  .home-page{
+    margin-top: 10vh;
+  }
+  .buttons {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2vh;
+    padding: 0 0;
+    .button{
+      width: 85%;
+    }
+  }
+}

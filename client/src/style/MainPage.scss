@@ -1,0 +1,115 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main-page{
+  margin-top: 15vh;
+}
+.container{
+  padding: 0 10%
+}
+.main-text{
+  margin-bottom: 10px;
+  //font-size: 26px;
+  color: #313131;
+  font-weight: 600;
+}
+.add-noutin-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  gap: 5%;
+  .new-todo{
+    width: 80%;
+  }
+  .add-todo-button{
+    height: 50%;
+  }
+}
+.active-tasks {
+  margin: 20px 0 120px;
+  input:focus{
+    outline: none;
+  }
+  h3 {
+    color: #313131;
+    font-weight: 600;
+    font-size: 23px;
+    margin: 0 0 20px;
+  }
+  .todos {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 5%;
+    padding: 0 20%;
+    margin: 15px 0 0;
+    .todos-num {
+      margin-right: 8%;
+      min-width: 30px;
+    }
+    .todos-text-container {
+      width: 100%;
+      position: relative;
+
+      &.complete::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        top: calc(50% - 1px);
+        left: 0;
+        height: 3px;
+        background: #1c9ae8;
+        border-radius: 2px;
+      }
+      .todos-text {
+        position: relative;
+        display: flex;
+        width: 100%;
+        font-size: 20px;
+        border: none;
+        text-align: center;
+
+        &.important {
+          font-weight: 600;
+          color: #ff792c;
+        }
+
+      }
+    }
+
+    .todos-complete, .todos-important {
+      cursor: pointer;
+      font-weight: 900;
+      color: #3e5665;
+    }
+    .todos-complete:hover {
+      color: #1c9ae8;
+    }
+    .todos-important:hover {
+      color: #e81c23;
+      opacity: 0.5;
+    }
+  }
+}
+.todo-function {
+  transition: all 0.25s;
+  :hover {
+    transform: scale(1.1);
+  }
+}
+
+@media screen and (max-width: 900px) and (min-height: 500px){
+  .active-tasks .todos {
+    padding: 0 10%;
+  }
+}
+@media screen and (max-width: 500px){
+  .active-tasks .todos {
+    padding: 0 0;
+  }
+}

@@ -1,0 +1,48 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.auth-page{
+  margin-top: 15vh;
+}
+.container{
+  padding: 0 10%
+}
+
+@media screen and (max-width:500px) {
+  .form {
+    min-width: 100px!important;
+    width: 100% !important;
+  }
+}
+
+
+.form {
+  display: flex;
+  gap: 10%;
+  width: 80%;
+  min-width: 400px;
+  max-width: 600px;
+  margin: auto;
+  flex-direction: column;
+}
+.MuiFormControl-root{
+  margin-bottom: 5%!important;
+}
+.auth-text{
+  margin-bottom: 10px;
+  font-size: 26px;
+  color: #313131;
+  font-weight: 600;
+}
+
+.auth-buttons{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+.auth-buttons button {
+
+}
