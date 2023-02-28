@@ -1,6 +1,7 @@
 {
   "name": "fullstuck",
   "version": "0.1.0",
+  "homepage": "https://senhammi.github.io/Notebook-App",
   "private": true,
   "proxy": "http://127.0.0.1:5000",
   "dependencies": {
@@ -19,6 +20,8 @@
     "web-vitals": "^3.1.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

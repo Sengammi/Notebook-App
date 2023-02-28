@@ -1,9 +1,12 @@
 {
   "name": "fullstuck",
   "version": "1.0.0",
+  "homepage": "https://senhammi.github.io/Notebook-App",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "predeploy": "npm run predeploy --prefix client",
+    "deploy": "npm run deploy --prefix client",
     "server": "nodemon index.js",
     "client": "npm run start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
@@ -20,5 +23,8 @@
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^7.0.0",
     "nodemon": "^2.0.20"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
